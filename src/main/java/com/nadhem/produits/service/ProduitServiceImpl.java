@@ -3,6 +3,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.nadhem.produits.entities.Categorie;
 import com.nadhem.produits.entities.Produit;
 import com.nadhem.produits.repos.ProduitRepository;
 @Service
@@ -28,5 +29,40 @@ public Produit saveProduit(Produit p) {
 	}
 	@Override
 	public List<Produit> getAllProduits() { return produitRepository.findAll();
+	}
+	@Override
+	public List<Produit> findByNomProduit(String nom) {
+		// TODO Auto-generated method stub
+		return produitRepository.findByNomProduit(nom);
+		}
+	@Override
+	public List<Produit> findByNomProduitContains(String nom) {
+		// TODO Auto-generated method stub
+		return produitRepository.findByNomProduitContains(nom);
+	}
+	@Override
+	public List<Produit> findByNomPrix(String nom, Double prix) {
+		// TODO Auto-generated method stub
+		return produitRepository.findByNomPrix(nom, prix);
+	}
+	@Override
+	public List<Produit> findByCategorie(Categorie categorie) {
+		// TODO Auto-generated method stub
+		return produitRepository.findByCategorie(categorie);
+	}
+	@Override
+	public List<Produit> findByCategorieIdCat(Long id) {
+		// TODO Auto-generated method stub
+		return produitRepository.findByCategorieIdCat(id);
+	}
+	@Override
+	public List<Produit> findByOrderByNomProduitAsc() {
+		// TODO Auto-generated method stub
+		return produitRepository.findByOrderByNomProduitAsc();
+	}
+	@Override
+	public List<Produit> trierProduitsNomsPrix() {
+		// TODO Auto-generated method stub
+		return produitRepository.trierProduitsNomsPrix();
 	}
 	}
