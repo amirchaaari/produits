@@ -55,9 +55,9 @@ nomProduit + ", prixProduit=" + prixProduit
 + ", dateCreation=" + dateCreation + "]";
 }
 public Categorie getCategorie() {
-	return Categorie;
+	return categorie;
 }
 public void setCategorie(Categorie categorie) {
-	Categorie = categorie;
+	categorie = categorie;
 }
 }

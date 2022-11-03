@@ -17,14 +17,14 @@ class ProduitsApplicationTests {
 private ProduitRepository produitRepository;
 @Test
 public void testCreateProduit() {
-Produit prod = new Produit("PC lenovo",1000.0,new Date());
+Produit prod = new Produit("PC de amir",1000.0,new Date());
 produitRepository.save(prod);
 }
 
 
 @Test
 public void testFindProduit()
-{ Produit p = produitRepository.findById(1L).get(); System.out.println(p);
+{ Produit p = produitRepository.findById(29L).get(); System.out.println(p);
 }
 
 @Test
